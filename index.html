@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Pookie Writer Ji 🎀</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Georgia, serif;
+    background: linear-gradient(135deg, #dbeafe, #fce7f3, #ede9fe);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #38405f;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 90%;
+    max-width: 650px;
+    padding: 45px 25px;
+}
+
+.small {
+    font-size: 14px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    opacity: 0.7;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 42px;
+    margin: 10px 0;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.heart {
+    font-size: 55px;
+    animation: float 2s ease-in-out infinite;
+}
+
+button {
+    margin-top: 25px;
+    padding: 14px 28px;
+    border: none;
+    border-radius: 30px;
+    background: white;
+    color: #596080;
+    font-size: 16px;
+    font-family: Georgia, serif;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+    cursor: pointer;
+}
+
+button:active {
+    transform: scale(0.96);
+}
+
+.hidden {
+    display: none;
+    margin-top: 30px;
+    animation: appear 1s ease;
+}
+
+@keyframes float {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.star {
+    position: fixed;
+    animation: fall 5s linear infinite;
+    opacity: 0.6;
+}
+
+@keyframes fall {
+    from {
+        transform: translateY(-100px) rotate(0deg);
+    }
+    to {
+        transform: translateY(110vh) rotate(360deg);
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="star" style="left:10%; font-size:20px;">✦</div>
+<div class="star" style="left:30%; font-size:15px; animation-delay:1s;">♡</div>
+<div class="star" style="left:55%; font-size:18px; animation-delay:2s;">✧</div>
+<div class="star" style="left:80%; font-size:22px; animation-delay:3s;">♡</div>
+
+<div class="container">
+
+    <div class="heart">🎀</div>
+
+    <div class="small">a little something for you</div>
+
+    <h1>Hey, Pookie Writer Ji 💗</h1>
+
+    <p>
+        Someone has been secretly preparing a tiny little world
+        just for you...
+    </p>
+
+    <button onclick="showSurprise()">
+        Open your surprise ✨
+    </button>
+
+    <div id="surprise" class="hidden">
+        <p>
+            Before anything else...
+            <br><br>
+            <b>Happy Birthday, my favourite writer ji! 🥹🎀</b>
+        </p>
+
+        <p>
+            This is only the beginning.
+            There are still little surprises waiting for you. 👀💌
+        </p>
+    </div>
+
+</div>
+
+<script>
+function showSurprise() {
+    document.getElementById("surprise").style.display = "block";
+}
+</script>
+
+</body>
+</html>
