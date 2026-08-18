@@ -338,6 +338,7 @@ function unlockSecret() {
         wrong.classList.add("hidden");
 
         alert("✨ You found the secret! 💙");
+    showFinalSlide();
 
     } else {
 
@@ -348,6 +349,8 @@ function unlockSecret() {
 function openGift() {
     document.getElementById("giftContent").style.display = "block";
 }
+function showFinalSlide() {
+    document.getElementById("finalSlide").style.display = "block";
 </script>
 <!-- SLIDE 5 — THE FINAL SURPRISE -->
 <div id="finalSlide" class="hidden">
