@@ -105,6 +105,68 @@ button:active {
         transform: translateY(110vh) rotate(360deg);
     }
 }
+/* SLIDE 4 — SECRET PAGE */
+#secretSlide {
+    min-height: 100vh;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.secret-container {
+    max-width: 500px;
+    margin: auto;
+    padding: 35px 20px;
+    position: relative;
+}
+
+.secret-container h1 {
+    margin-bottom: 15px;
+}
+
+.hint {
+    margin: 25px auto;
+    padding: 15px;
+    border-radius: 18px;
+}
+
+#secretPassword {
+    padding: 14px;
+    width: 80%;
+    max-width: 300px;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+    text-align: center;
+    font-size: 16px;
+}
+
+.secret-container button {
+    display: block;
+    margin: 15px auto;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.plush {
+    position: absolute;
+    font-size: 55px;
+}
+
+.plush-left {
+    left: 0;
+    top: 30px;
+}
+
+.plush-right {
+    right: 0;
+    top: 30px;
+}
+
+.hidden {
+    display: none;
+}
 </style>
 </head>
 
@@ -209,6 +271,9 @@ button:active {
         <h2>The Backstage News 😭🤞🏻</h2>
         <p>And then came THIS news... backstage noticed. A moment we definitely had to save. 🩵</p>
     </div>
+    <button onclick="showSecret()">
+    There's one more secret... 🔐
+    </button>
 
 </div>
     </div>
