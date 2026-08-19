@@ -354,6 +354,25 @@ function openGift() {
 function showFinalSlide() {
     document.getElementById("finalSlide").style.display = "block";
 }
+function updateHappiness() {
+    const value = document.getElementById("happiness").value;
+    document.getElementById("happinessValue").innerText = value + "%";
+}
+
+function checkHappiness() {
+    const value = document.getElementById("happiness").value;
+    const result = document.getElementById("happinessResult");
+
+    result.classList.remove("hidden");
+
+    if (value == 100) {
+        result.innerText =
+            "I KNEW ITTT 😭🎀 You deserve all the happiness in the world! 💙";
+    } else {
+        result.innerText =
+            "Heheee, Pookie Ji... increase it to 100% 👀🎀";
+    }
+}
 </script>
 <!-- SLIDE 5 — THE FINAL SURPRISE -->
 <div id="finalSlide" class="hidden">
@@ -377,6 +396,28 @@ function showFinalSlide() {
         <p>
             A little cake for the sweetest soul. 🥹🩵
         </p>
+        <h2>🎀 How Happy Are You Today?</h2>
+
+<p>
+    Be honest, Pookie Ji... 👀💙
+</p>
+
+<input
+    type="range"
+    id="happiness"
+    min="0"
+    max="100"
+    value="0"
+    oninput="updateHappiness()"
+>
+
+<p id="happinessValue">0%</p>
+
+<button onclick="checkHappiness()">
+    Check my answer 💙
+</button>
+
+<p id="happinessResult" class="hidden"></p>
 
     </div>
 
