@@ -169,3 +169,325 @@ button:hover {
     margin: 25px auto;
     padding: 25px;
     border: 1px dashed #a85b6b;
+        border-radius: 20px;
+    background: rgba(70, 20, 35, 0.5);
+}
+
+.certificate {
+    margin-top: 25px;
+    padding: 30px 20px;
+    border: 2px solid #a85b6b;
+    border-radius: 20px;
+    background: rgba(55, 14, 27, 0.8);
+}
+
+.big {
+    font-size: 55px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="objects">
+    <span>🔮</span>
+    <span>🗝️</span>
+    <span>🕯️</span>
+    <span>🧿</span>
+    <span>📜</span>
+    <span>🔐</span>
+    <span>🃏</span>
+    <span>⭐</span>
+</div>
+
+<section id="opening" class="screen">
+
+    <div class="card">
+
+        <div class="badge">
+            TOP SECRET • CASE #27
+        </div>
+
+        <div class="big">🕵🏻‍♀️</div>
+
+        <h1>THE MISSING SURPRISE</h1>
+
+        <p>
+            Detective Pookie Ji,<br>
+            your mission has officially begun. 👀
+        </p>
+
+        <p>
+            Somewhere inside this case is a secret surprise. 🎁
+        </p>
+
+        <p>
+            You have <strong>3 clues</strong>.<br>
+            Solve them all to unlock the surprise. 🔎
+        </p>
+
+        <button onclick="showClue1()">
+            START THE CASE 🔎
+        </button>
+
+    </div>
+
+</section>
+
+<section id="clue1" class="screen hidden">
+
+    <div class="card">
+
+        <div class="badge">CLUE 01 • THE CONNECTION</div>
+
+        <h2>🔎 Who started this whole thing?</h2>
+
+        <p>
+            Two people became friends because of someone
+            they both absolutely adore. 👀💙
+        </p>
+
+        <p><strong>Who started this whole connection?</strong></p>
+
+        <button class="choice" onclick="wrongAnswer(1)">
+            A. A random Instagram comment
+        </button>
+
+        <button class="choice" onclick="correct1()">
+            B. Darshan Raval 💙
+        </button>
+
+        <button class="choice" onclick="wrongAnswer(1)">
+            C. A school teacher
+        </button>
+
+        <button class="choice" onclick="wrongAnswer(1)">
+            D. A mysterious pigeon 🐦
+        </button>
+
+        <p id="answer1"></p>
+
+    </div>
+
+</section>
+
+<section id="clue2" class="screen hidden">
+
+    <div class="card">
+
+        <div class="badge">CLUE 02 • THE WRITER</div>
+
+        <h2>📖 What am I?</h2>
+
+        <p>
+            I have pages but I'm not a notebook.<br>
+            I have characters but I'm not a movie.<br>
+            I can make you stay awake way past bedtime. 👀
+        </p>
+
+        <p><strong>What am I?</strong></p>
+
+        <button class="choice" onclick="wrongAnswer(2)">
+            A. A sandwich 🥪
+        </button>
+
+        <button class="choice" onclick="correct2()">
+            B. A story 📖
+        </button>
+
+        <button class="choice" onclick="wrongAnswer(2)">
+            C. A calculator 🧮
+        </button>
+
+        <button class="choice" onclick="wrongAnswer(2)">
+            D. A pillow 💤
+        </button>
+
+        <p id="answer2"></p>
+
+    </div>
+
+</section>
+
+<section id="clue3" class="screen hidden">
+
+    <div class="card">
+
+        <div class="badge">CLUE 03 • FINAL CLUE</div>
+
+        <h2>🚨 Final Question!</h2>
+
+        <p>
+            Which one of these is basically impossible
+            for Pookie Ji to resist? 😭
+        </p>
+
+        <button class="choice" onclick="wrongAnswer(3)">
+            A. A good story 📖
+        </button>
+
+        <button class="choice" onclick="wrongAnswer(3)">
+            B. Darshan content 💙
+        </button>
+
+        <button class="choice" onclick="wrongAnswer(3)">
+            C. A little gossip 👀
+        </button>
+
+        <button class="choice" onclick="correct3()">
+            D. ALL OF THE ABOVE 😭🎀
+        </button>
+
+        <p id="answer3"></p>
+
+    </div>
+
+</section>
+
+<section id="prize" class="screen hidden">
+
+    <div class="card">
+
+        <div class="badge">CASE SOLVED • SURPRISE UNLOCKED</div>
+
+        <div class="big">🎰</div>
+
+        <h1>POOKIE PRIZE MACHINE</h1>
+
+        <p>
+            You solved all three clues. 👀
+        </p>
+
+        <p>
+            Now it's time to find out what you've won. 🎁
+        </p>
+
+        <button onclick="revealPrize()">
+            SPIN FOR YOUR PRIZE 🎰
+        </button>
+
+        <div id="prizeResult" class="prize hidden">
+
+            <div class="big">🏆</div>
+
+            <h2>CERTIFIED POOKIE JI™</h2>
+
+            <p><strong>Status:</strong> Too Pookie To Handle 😭</p>
+            <p><strong>Level:</strong> PRO MAX 🎀</p>
+            <p><strong>Special Skill:</strong> Making ordinary conversations 10x more chaotic. 😂</p>
+            <p><strong>Expiration:</strong> NEVER ♾️</p>
+
+            <button onclick="showCertificate()">
+                VIEW OFFICIAL CERTIFICATE 🧿
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section id="certificate" class="screen hidden">
+
+    <div class="card">
+
+        <div class="badge">OFFICIAL CASE RECORD</div>
+
+        <div class="certificate">
+
+            <div class="big">🧿🎀🏆</div>
+
+            <h1>POOKIE JI</h1>
+
+            <h2>Certified Lucky Charm</h2>
+
+            <p>
+                This certificate officially confirms that
+                Pookie Ji has successfully completed
+                <strong>CASE #27</strong>.
+            </p>
+
+            <p>
+                ⭐ Excellent at making people smile<br>
+                📖 Professional Writer Ji<br>
+                💙 Darshan Content Specialist<br>
+                👀 Certified Gossip Department<br>
+                🎀 Maximum Pookie Level Achieved
+            </p>
+
+            <h2>♾️ VALID FOREVER ♾️</h2>
+
+        </div>
+
+        <p>
+            🚨 CASE #27: <strong>SOLVED</strong> 🚨
+        </p>
+
+    </div>
+
+</section>
+
+<script>
+
+function hideAll() {
+    document.getElementById("opening").classList.add("hidden");
+    document.getElementById("clue1").classList.add("hidden");
+    document.getElementById("clue2").classList.add("hidden");
+    document.getElementById("clue3").classList.add("hidden");
+    document.getElementById("prize").classList.add("hidden");
+    document.getElementById("certificate").classList.add("hidden");
+}
+
+function showClue1() {
+    hideAll();
+    document.getElementById("clue1").classList.remove("hidden");
+}
+
+function correct1() {
+    document.getElementById("answer1").innerHTML =
+        "🎉 CLUE 1 SOLVED! Obviously the pigeon was suspicious though. 🐦😭";
+
+    setTimeout(function() {
+        hideAll();
+        document.getElementById("clue2").classList.remove("hidden");
+    }, 1200);
+}
+
+function correct2() {
+    document.getElementById("answer2").innerHTML =
+        "📖 CLUE 2 UNLOCKED! Detective skills: improving. 👀⭐";
+
+    setTimeout(function() {
+        hideAll();
+        document.getElementById("clue3").classList.remove("hidden");
+    }, 1200);
+}
+
+function correct3() {
+    document.getElementById("answer3").innerHTML =
+        "🎉 CORRECT! Okay detective, you officially passed! 😭🤝🏻";
+
+    setTimeout(function() {
+        hideAll();
+        document.getElementById("prize").classList.remove("hidden");
+    }, 1200);
+}
+
+function wrongAnswer(clue) {
+    document.getElementById("answer" + clue).innerHTML =
+        "❌ Nopeee! Detective, try again. 👀";
+}
+
+function revealPrize() {
+    document.getElementById("prizeResult").classList.remove("hidden");
+}
+
+function showCertificate() {
+    hideAll();
+    document.getElementById("certificate").classList.remove("hidden");
+}
+
+</script>
+
+</body>
+</html>
