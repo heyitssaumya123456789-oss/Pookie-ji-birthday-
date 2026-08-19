@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CASE #27 — The Missing Surprise</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at top, #3b111d, #12070b 55%, #050305);
+    color: #f5e9dc;
+    font-family: Georgia, serif;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+.case {
+    width: 90%;
+    max-width: 650px;
+    margin: auto;
+    padding: 70px 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.objects {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+.objects span {
+    position: absolute;
+    font-size: 30px;
+    animation: float 4s ease-in-out infinite;
+}
+
+.objects span:nth-child(1) { left: 8%; top: 12%; }
+.objects span:nth-child(2) { right: 10%; top: 18%; }
+.objects span:nth-child(3) { left: 15%; bottom: 20%; }
+.objects span:nth-child(4) { right: 15%; bottom: 15%; }
+.objects span:nth-child(5) { left: 45%; top: 8%; }
+.objects span:nth-child(6) { right: 35%; bottom: 8%; }
+
+@keyframes float {
+    0%,100% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-12px) rotate(5deg);
+    }
+}
+
+.badge {
+    font-size: 14px;
+    letter-spacing: 4px;
+    opacity: 0.7;
+}
+
+h1 {
+    font-size: 48px;
+    margin: 20px 0 10px;
+}
+
+h2 {
+    font-weight: normal;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.case-file {
+    margin-top: 35px;
+    padding: 25px;
+    border: 1px solid #7d3948;
+    border-radius: 18px;
+    background: rgba(40, 10, 18, 0.7);
+    box-shadow: 0 0 30px rgba(90, 20, 40, 0.35);
+}
+
+button {
+    margin-top: 25px;
+    padding: 14px 30px;
+    border: 1px solid #a65b6b;
+    border-radius: 25px;
+    background: #4b1725;
+    color: #f8e9dc;
+    font-size: 16px;
+    font-family: Georgia, serif;
+    cursor: pointer;
+}
+
+button:active {
+    transform: scale(0.96);
+}
+</style>
+</head>
+
+<body>
+
+<div class="objects">
+    <span>🔮</span>
+    <span>🗝️</span>
+    <span>🕯️</span>
+    <span>🧿</span>
+    <span>📜</span>
+    <span>🔐</span>
+</div>
+
+<div class="case">
+
+    <div class="badge">
+        TOP SECRET • CASE #27
+    </div>
+
+    <h1>🕵🏻‍♀️</h1>
+
+    <h2>THE MISSING SURPRISE</h2>
+
+    <div class="case-file">
+
+        <p>
+            Detective Pookie Ji,
+            your mission has officially begun. 👀
+        </p>
+
+        <p>
+            Somewhere inside this case is a secret surprise. 🎁
+        </p>
+
+        <p>
+            You have <strong>3 clues</strong>.
+            Solve them all to unlock the surprise. 🔎
+        </p>
+
+        <button>
+            START THE CASE 🔎
+        </button>
+
+    </div>
+
+</div>
+
+</body>
+</html>
