@@ -373,6 +373,24 @@ function checkHappiness() {
             "Heheee, Pookie Ji... increase it to 100% 👀🎀";
     }
 }
+function pickPookie(card) {
+    const result = document.getElementById("pookieResult");
+
+    result.classList.remove("hidden");
+
+    if (card === 1) {
+        result.innerText =
+            "🌷 Soft Pookie detected! 🥹🎀 Too innocent for this world.";
+    } 
+    else if (card === 2) {
+        result.innerText =
+            "🦋 Chaotic Pookie detected! 😭💙 5 minutes of peace? Never.";
+    } 
+    else {
+        result.innerText =
+            "🧸 PREMIUM POOKIE PRO MAX! 😭🎀 No further testing required.";
+    }
+}
 </script>
 <!-- SLIDE 5 — THE FINAL SURPRISE -->
 <div id="finalSlide" class="hidden">
@@ -412,6 +430,32 @@ function checkHappiness() {
 >
 
 <p id="happinessValue">0%</p>
+<h2>🃏 Pick Your Pookie Card 🎀</h2>
+
+<p>
+    Okayyy Pookie Ji... choose ONE 👀💙
+</p>
+
+<div id="pookieCards">
+
+    <button onclick="pickPookie(1)">
+        🌷<br>
+        Soft Pookie
+    </button>
+
+    <button onclick="pickPookie(2)">
+        🦋<br>
+        Chaotic Pookie
+    </button>
+
+    <button onclick="pickPookie(3)">
+        🧸<br>
+        Premium Pookie
+    </button>
+
+</div>
+
+<p id="pookieResult" class="hidden"></p>
 
 <button onclick="checkHappiness()">
     Check my answer 💙
